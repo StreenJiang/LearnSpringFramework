@@ -15,12 +15,22 @@
         <property name="id" value="1001" />
         <property name="name" value="John" />
         <property name="age" value="15" />
-        <property name="address" ref="address"/>
+        <property name="addresses">
+            <list>
+                <ref bean="address1" />
+                <ref bean="address2" />
+            </list>
+        </property>
     </bean>
 
-    <bean id="address" class="com.learn.springFramework.entity.Address">
+    <bean id="address1" class="com.learn.springFramework.entity.Address">
         <property name="id" value="101" />
-        <property name="name" value="Wall Street" />
+        <property name="name" value="School: Wall Street" />
+    </bean>
+
+    <bean id="address2" class="com.learn.springFramework.entity.Address">
+        <property name="id" value="102" />
+        <property name="name" value="Home: Great Park" />
     </bean>
 
 </beans>
