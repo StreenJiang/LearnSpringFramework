@@ -20,5 +20,7 @@ public class AspectTest {
         PointCutTestService pointCutTestService = context.getBean(PointCutTestService.class);
         pointCutTestService.test1();
         pointCutTestService.test2();
+        String str = pointCutTestService.getStr("Hello AOP...");
+        System.out.println("str: " + str);
     }
 }

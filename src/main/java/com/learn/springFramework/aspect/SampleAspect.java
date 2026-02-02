@@ -18,10 +18,10 @@ public class SampleAspect {
     public Object aroundAdvice(ProceedingJoinPoint point) throws Throwable {
         System.out.println("AOP: around advice starts working...");
 
+        // Run target method
         Object proceed = point.proceed();
 
         System.out.println("AOP: around advice work done...");
-
         return proceed;
     }
 }
