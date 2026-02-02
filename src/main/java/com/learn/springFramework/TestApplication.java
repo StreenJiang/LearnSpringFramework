@@ -1,4 +1,4 @@
-package com.learn.springFramework.test;
+package com.learn.springFramework;
 
 import com.learn.springFramework.entity.Student;
 import org.springframework.context.ApplicationContext;

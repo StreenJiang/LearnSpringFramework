@@ -1,5 +1,6 @@
 package com.learn.springFramework;
 
+import com.learn.springFramework.service.PointCutTestService;
 import com.learn.springFramework.service.StudentService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -15,5 +16,9 @@ public class AspectTest {
         ApplicationContext context = new AnnotationConfigApplicationContext(AspectTest.class);
         StudentService studentService = context.getBean(StudentService.class);
         studentService.print(studentService.getInfo());
+
+        PointCutTestService pointCutTestService = context.getBean(PointCutTestService.class);
+        pointCutTestService.test1();
+        pointCutTestService.test2();
     }
 }

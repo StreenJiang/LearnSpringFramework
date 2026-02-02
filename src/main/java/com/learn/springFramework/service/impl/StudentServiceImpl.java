@@ -11,7 +11,9 @@ import java.util.List;
 public class StudentServiceImpl implements StudentService {
     @Override
     public void print(Student stu) {
+        System.out.println("Calling internal method");
         getInfo(); // This method does not be enhanced both in JDK dynamic proxy or CGLib proxy
+
         System.out.println("This is current student: " + stu.toString());
     }
 
